@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_06_093352) do
+ActiveRecord::Schema.define(version: 2021_08_06_093610) do
 
   create_table "posts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.text "body"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_08_06_093352) do
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "idx1"
   end
 
 end
