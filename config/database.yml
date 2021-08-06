@@ -10,12 +10,16 @@
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
 default: &default
-  adapter: mysql2
+  adapter: tidb
   encoding: utf8mb4
+  collation: utf8mb4_general_ci
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: 127.0.0.1
+  port: 4000
+  variables:
+    tidb_enable_noop_functions: ON
   username: root
   password:
-  socket: /tmp/mysql.sock
 
 development:
   <<: *default
