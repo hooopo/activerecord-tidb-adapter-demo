@@ -7,7 +7,7 @@ ruby '2.7.0'
 gem 'rails', '~> 6.1.4'
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.5'
-gem 'activerecord-tidb-adapter'#, path: '../activerecord-tidb-adapter/'
+gem 'activerecord-tidb-adapter'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -55,3 +55,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "pry-rails", "~> 0.3.9"
